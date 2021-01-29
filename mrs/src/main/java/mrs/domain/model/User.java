@@ -30,7 +30,7 @@ public class User implements Serializable {
 	private String lastName;
 
 	/** 役職 */
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.STRING) //Enum(String型)のみ格納可能に設定
 	private RoleName roleName;
 
 	/**

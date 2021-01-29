@@ -15,7 +15,7 @@ public class ReservableRoomId implements Serializable {
 	/** 会議室ID */
 	private Integer roomId;
 
-	/** 予約可能日程 */
+	/** 予約日 */
 	private LocalDate reservedDate;
 
 	/**
@@ -76,16 +76,16 @@ public class ReservableRoomId implements Serializable {
 	}
 
 	/**
-	 * 予約可能日程の取得
-	 * @return reservedDate 予約可能日程
+	 * 予約日の取得
+	 * @return reservedDate 予約日
 	 */
 	public LocalDate getReservedDate() {
 		return reservedDate;
 	}
 
 	/**
-	 * 予約可能日程の設定
-	 * @param reservedDate 予約可能日程
+	 * 予約日の設定
+	 * @param reservedDate 予約日
 	 */
 	public void setReservedDate(LocalDate reservedDate) {
 		this.reservedDate = reservedDate;

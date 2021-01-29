@@ -16,13 +16,13 @@ import javax.persistence.MapsId;
 @Entity
 public class ReservableRoom implements Serializable {
 	/** 予約可能会議室ID */
-	@EmbeddedId
+	@EmbeddedId //他のクラスの要素をIDとして指定(複合主キー)
 	private ReservableRoomId reserableRoomId;
 
 	/** 会議室 */
-	@ManyToOne
-	@JoinColumn(name = "room_id", insertable = false, updatable = false)
-	@MapsId("roomId")
+	@ManyToOne //エンティティの結合(InnerJoinの許容)
+	@JoinColumn(name = "room_id", insertable = false, updatable = false) //結合キーの設定(キー、新規レコードの発行可否、更新可否)
+	@MapsId("roomId") //外部キー
 	private MeetingRoom meetingRoom;
 
 	/**

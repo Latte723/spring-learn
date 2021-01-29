@@ -17,7 +17,7 @@ public class MeetingRoom implements Serializable {
 
 	/** 会議室ID */
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //値の自動生成(生成方法：一意)
 	private Integer roomId;
 
 	/** 会議室名 */
